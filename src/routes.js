@@ -13,6 +13,9 @@ const AppNavigator = createStackNavigator(
   {
     defaultNavigationOptions: {
       headerTitleAlign: 'center',
+      headerStyle: {
+        backgroundColor: '#f5f5f5',
+      },
       headerTitle: () => <Image source={logo} />,
     },
   },
