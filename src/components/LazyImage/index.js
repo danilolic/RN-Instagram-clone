@@ -3,16 +3,20 @@ import {Animated} from 'react-native';
 
 import {Small, Original} from './styles';
 
-export default function LazyImage({aspectRatio, source, smallSource}) {
+export default function LazyImage({
+  aspectRatio,
+  source,
+  smallSource,
+  shouldLoad,
+}) {
   const [loaded, setLoaded] = useState(false);
   const opacity = new Animated.Value(0);
 
-  // Only to simulate the request timing
   useEffect(() => {
-    setTimeout(() => {
+    if (shouldLoad) {
       setLoaded(true);
-    }, 1500);
-  });
+    }
+  }, [shouldLoad]);
 
   function handleAnimeted() {
     Animated.timing(opacity, {
