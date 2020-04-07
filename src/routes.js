@@ -4,7 +4,7 @@ import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 
 import logo from './assets/instagram.png';
-import Feed from './pages/feed';
+import Feed from './pages/Feed';
 
 const AppNavigator = createStackNavigator(
   {
