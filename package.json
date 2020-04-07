@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
+    "android": "adb reverse tcp:8081 tcp:8081 && react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
@@ -18,7 +18,8 @@
     "react-native-safe-area-context": "^0.7.3",
     "react-native-screens": "^2.4.0",
     "react-navigation": "^4.3.7",
-    "react-navigation-stack": "^2.3.11"
+    "react-navigation-stack": "^2.3.11",
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
